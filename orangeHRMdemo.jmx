@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -24,7 +26,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">10</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -35,7 +37,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">C:/Users/rames/Desktop/WorkSpace/Jmeter/Orange HRM Jmeter Demo/Dataset/employeeData.csv</stringProp>
@@ -51,7 +53,7 @@
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Launch" enabled="true"/>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Launch-52" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Launch-52">
               <stringProp name="TestPlan.comments">ORIGINAL_NAME USED BY CR, DON&apos;T DELETE. Prepend addition comments if necessary.;ORIGINAL_NAME=Launch-52</stringProp>
               <stringProp name="HTTPSampler.domain">opensource-demo.orangehrmlive.com</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
@@ -135,7 +137,7 @@
               </RegexExtractor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Launch-54" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Launch-54">
               <stringProp name="TestPlan.comments">ORIGINAL_NAME USED BY CR, DON&apos;T DELETE. Prepend addition comments if necessary.;ORIGINAL_NAME=Launch-54</stringProp>
               <stringProp name="HTTPSampler.domain">opensource-demo.orangehrmlive.com</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
@@ -151,7 +153,7 @@
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -194,7 +196,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Login" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Login"/>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login-57" enabled="true">
               <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
@@ -1731,9 +1733,9 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create an Employee"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create an Employee" enabled="true"/>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-79">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-79" enabled="true">
               <stringProp name="TestPlan.comments">ORIGINAL_NAME USED BY CR, DON&apos;T DELETE. Prepend addition comments if necessary.;ORIGINAL_NAME=Create an Employee-79</stringProp>
               <stringProp name="HTTPSampler.domain">opensource-demo.orangehrmlive.com</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
@@ -1855,7 +1857,7 @@
               </JSONPostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-80">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-80" enabled="true">
               <stringProp name="TestPlan.comments">ORIGINAL_NAME USED BY CR, DON&apos;T DELETE. Prepend addition comments if necessary.;ORIGINAL_NAME=Create an Employee-80</stringProp>
               <stringProp name="HTTPSampler.domain">opensource-demo.orangehrmlive.com</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
@@ -1924,7 +1926,7 @@
               </RegexExtractor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-82">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-82" enabled="true">
               <stringProp name="TestPlan.comments">ORIGINAL_NAME USED BY CR, DON&apos;T DELETE. Prepend addition comments if necessary.;ORIGINAL_NAME=Create an Employee-82</stringProp>
               <stringProp name="HTTPSampler.domain">opensource-demo.orangehrmlive.com</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
@@ -1993,7 +1995,7 @@
               </RegexExtractor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-84">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an Employee-84" enabled="true">
               <stringProp name="TestPlan.comments">ORIGINAL_NAME USED BY CR, DON&apos;T DELETE. Prepend addition comments if necessary.;ORIGINAL_NAME=Create an Employee-84</stringProp>
               <stringProp name="HTTPSampler.domain">opensource-demo.orangehrmlive.com</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
@@ -2840,7 +2842,7 @@
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener">
+          <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
             <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="influxdbMetricsSender" elementType="Argument">
@@ -2937,14 +2939,14 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor">
+      <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
         <boolProp name="displayJMeterProperties">false</boolProp>
         <boolProp name="displayJMeterVariables">true</boolProp>
         <boolProp name="displaySamplerProperties">true</boolProp>
         <boolProp name="displaySystemProperties">false</boolProp>
       </DebugPostProcessor>
       <hashTree/>
-      <com.blazemeter.jmeter.correlation.CorrelationProxyControl guiclass="com.blazemeter.jmeter.correlation.CorrelationProxyControlGui" testclass="com.blazemeter.jmeter.correlation.CorrelationProxyControl" testname="bzm - Auto Correlation Recorder">
+      <com.blazemeter.jmeter.correlation.CorrelationProxyControl guiclass="com.blazemeter.jmeter.correlation.CorrelationProxyControlGui" testclass="com.blazemeter.jmeter.correlation.CorrelationProxyControl" testname="bzm - Auto Correlation Recorder" enabled="true">
         <stringProp name="ProxyControlGui.port">8080</stringProp>
         <collectionProp name="ProxyControlGui.exclude_list">
           <stringProp name="-42651529">.*(?!(\.json))(\.js)(.*|$)</stringProp>
